@@ -1,0 +1,6 @@
+[submodule "submodules/NineOldAndroids"]
+	path = submodules/NineOldAndroids
+	url = https://github.com/daffodilistic/NineOldAndroids.git
+[submodule "submodules/ActionBarSherlock"]
+	path = submodules/ActionBarSherlock
+	url = https://github.com/daffodilistic/ActionBarSherlock.git

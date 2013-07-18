@@ -38,6 +38,12 @@ public class CardStack extends AbstractCard {
 		mStack = this;
 	}
 
+	public CardStack(String title) {
+		cards = new ArrayList<Card>();
+		mStack = this;
+		
+		setTitle(title);
+	}
 	public ArrayList<Card> getCards() {
 		return cards;
 	}
@@ -63,8 +69,11 @@ public class CardStack extends AbstractCard {
 		final RelativeLayout container = (RelativeLayout) view
 				.findViewById(R.id.stackContainer);
 		final TextView title = (TextView) view.findViewById(R.id.stackTitle);
-
+		
 		if (!TextUtils.isEmpty(this.title)) {
+			if (stackTitleColor == null)
+				stackTitleColor = context.getResources().getString(R.color.card_title_text);
+			
 			title.setTextColor(Color.parseColor(stackTitleColor));
 			title.setText(this.title);
 			title.setVisibility(View.VISIBLE);
