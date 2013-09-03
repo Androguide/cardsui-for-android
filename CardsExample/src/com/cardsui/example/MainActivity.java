@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
+import android.widget.Toast;
+
 import com.fima.cardsui.objects.CardStack;
 import com.fima.cardsui.views.CardUI;
 
@@ -41,7 +44,15 @@ public class MainActivity extends Activity {
 
 			}
 		});
-
+		androidViewsCard.setOnLongClickListener(new OnLongClickListener() {    		
+    		
+			@Override
+			public boolean onLongClick(View v) {
+				Toast.makeText(v.getContext(), "This is a long click", Toast.LENGTH_SHORT).show();
+				return true;
+			}
+		
+		});
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri.parse("http://www.androidviews.net/"));
 

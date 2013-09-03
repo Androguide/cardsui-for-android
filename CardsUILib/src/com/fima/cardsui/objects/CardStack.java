@@ -97,6 +97,7 @@ public class CardStack extends AbstractCard {
 				// last card
 				cardView = card.getViewLast(context);
 				cardView.setOnClickListener(card.getClickListener());
+				cardView.setOnLongClickListener(card.getLongClickListener());
 			} else {
 				if (0 == i) {
 					// first card
@@ -109,6 +110,7 @@ public class CardStack extends AbstractCard {
 				}
 
 				cardView.setOnClickListener(getClickListener(this, container, i));
+				
 
 			}
 
